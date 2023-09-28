@@ -2,11 +2,10 @@ from index import *
 flagMenu = True
 while True:
     
-
     if(flagMenu):
         imprimirLista()
     numero = input('Elija entre las funciones:')
-    
+
     if numero.isdigit():
         numero = int(numero)
         if numero <= 10 and numero >= 0:
@@ -19,7 +18,7 @@ while True:
 
 match numero:
     case 1:
-        numParametro = ingresarNumero()
+        numParametro = validarNumeroIngresado()
         print(numParametro)
         if numParametro > 0:
             area = areaCiculo(numParametro)
@@ -28,7 +27,7 @@ match numero:
         else:
             print('Ingrese un numero entero posiivo')        
     case 2:
-        numeroIngresado = ingresarNumero()
+        numeroIngresado = validarNumeroIngresado()
         resultado = parOImpar(numeroIngresado)
     case 3:
         listaIngresada = ingresarLista()
